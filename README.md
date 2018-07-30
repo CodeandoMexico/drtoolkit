@@ -15,10 +15,7 @@ This is an open repository of tools that can be used by governments, rescue team
 
 ## Credits
 
-`{ }` with ❤️ by: 
-[Codeando México](http://www.codeandomexico.org), 
-[Code4Romania] (https://code4.ro) 
-[Code For All] (https://codeforall.org/)
+`{ }` with ❤️ by: [Codeando México](http://www.codeandomexico.org), [Code4Romania](https://code4.ro) and [Code For All](https://codeforall.org/)
 
 ## Licence
 
