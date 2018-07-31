@@ -1,0 +1,204 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Cabin");
+html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body {
+  font-family: 'Cabin', sans-serif;
+  line-height: 160%;
+  font-size: 16px; }
+
+.home-full-bg {
+  background-color: #0071bc; }
+  .home-full-bg .text {
+    padding: 20vh;
+    color: white;
+    font-size: 1.1em; }
+  .home-full-bg .button {
+    font-size: 1.1em;
+    margin-top: 20px;
+    margin-right: 10px;
+    background: #e31c3d;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer; }
+    .home-full-bg .button:hover {
+      background: #981b1e; }
+
+.menu {
+  background: #112e51; }
+  .menu .container {
+    position: relative; }
+  .menu .menu-logo {
+    display: inline-block;
+    text-align: center;
+    width: 150px;
+    padding: 10px 0; }
+  .menu .menu-text {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    padding: 40px 0; }
+    .menu .menu-text a {
+      padding-left: 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em; }
+      .menu .menu-text a:hover {
+        color: #e31c3d; }
+
+.section {
+  padding: 100px 0; }
+
+.third {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 31.33333%;
+  margin-left: 0%;
+  margin-right: 3%; }
+  .third::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .third:nth-child(n) {
+    margin-right: 3%;
+    float: left;
+    clear: none; }
+  .third:nth-child(3n) {
+    margin-right: 0%;
+    float: right; }
+  .third:nth-child(3n + 1) {
+    clear: both; }
+
+.half {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%; }
+  .half::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .half:nth-child(n) {
+    margin-right: 3%;
+    float: left;
+    clear: none; }
+  .half:nth-child(2n) {
+    margin-right: 0%;
+    float: right; }
+  .half:nth-child(2n + 1) {
+    clear: both; }
+
+.mega-text {
+  font-size: 4em;
+  line-height: 1; }
+
+.card {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 24px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 24px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 24px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px; }
+  .card::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .card:nth-child(n) {
+    margin-right: 3%;
+    float: left;
+    clear: none; }
+  .card:nth-child(4n) {
+    margin-right: 0%;
+    float: right; }
+  .card:nth-child(4n + 1) {
+    clear: both; }
+  .card .title {
+    font-size: 2em; }
+  .card * {
+    margin-bottom: 20px; }
+  .card .tag {
+    background: #FEFAC0;
+    padding: 10px;
+    margin-right: 5px; }
+
+.container {
+  width: auto;
+  max-width: 85%;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0; }
+  .container::after {
+    content: '';
+    display: table;
+    clear: both; }
+
+.hidden-form {
+  width: 50vw;
+  position: absolute;
+  transform-style: preserve-3d;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+@media screen and (max-width: 700px) {
+  .card, .third, .arrow, .text {
+    display: block;
+    clear: both;
+    float: none;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px; }
+    .card:first-child, .third:first-child, .arrow:first-child, .text:first-child {
+      margin-left: auto; }
+    .card:last-child, .third:last-child, .arrow:last-child, .text:last-child {
+      margin-right: auto; } }
