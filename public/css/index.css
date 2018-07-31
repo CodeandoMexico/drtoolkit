@@ -41,53 +41,22 @@ html, body {
   line-height: 160%;
   font-size: 16px; }
 
+.container {
+  width: auto;
+  max-width: 85%;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0; }
+  .container::after {
+    content: '';
+    display: table;
+    clear: both; }
+
 .center {
   text-align: center !important; }
-
-.home-full-bg {
-  background-color: #0071bc;
-  color: white; }
-  .home-full-bg .big-padding {
-    padding: 20vh 0;
-    font-size: 1.1em; }
-  .home-full-bg h1 {
-    line-height: 1; }
-  .home-full-bg .button {
-    font-size: 1.1em;
-    margin-top: 20px;
-    margin-right: 10px;
-    background: #e31c3d;
-    color: white;
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer; }
-    .home-full-bg .button:hover {
-      background: #981b1e; }
-
-.menu {
-  background: #112e51; }
-  .menu .container {
-    position: relative; }
-  .menu .menu-logo {
-    display: inline-block;
-    text-align: center;
-    width: 150px;
-    padding: 10px 0; }
-  .menu .menu-text {
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    text-align: right;
-    padding: 40px 0; }
-    .menu .menu-text a {
-      padding-left: 10px;
-      color: white;
-      text-decoration: none;
-      font-size: 1.2em; }
-      .menu .menu-text a:hover {
-        color: #e31c3d; }
 
 .section {
   padding: 100px 0; }
@@ -138,6 +107,51 @@ html, body {
   font-size: 4em;
   line-height: 1; }
 
+.home-full-bg {
+  background-color: #0071bc;
+  color: white; }
+  .home-full-bg .big-padding {
+    padding: 20vh 0;
+    font-size: 1.1em; }
+  .home-full-bg h1 {
+    line-height: 1; }
+  .home-full-bg .button {
+    font-size: 1.1em;
+    margin-top: 20px;
+    margin-right: 10px;
+    background: #e31c3d;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer; }
+    .home-full-bg .button:hover {
+      background: #981b1e; }
+
+.menu {
+  background: #112e51; }
+  .menu .container {
+    position: relative; }
+  .menu .menu-logo {
+    display: inline-block;
+    text-align: center;
+    width: 150px;
+    padding: 10px 0; }
+  .menu .menu-text {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    padding: 40px 0; }
+    .menu .menu-text a {
+      padding-left: 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em; }
+      .menu .menu-text a:hover {
+        color: #e31c3d; }
+
 .card {
   float: left;
   clear: none;
@@ -171,28 +185,6 @@ html, body {
     background: #fdb81e;
     padding: 10px;
     margin-right: 5px; }
-
-.container {
-  width: auto;
-  max-width: 85%;
-  float: none;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 0;
-  padding-right: 0; }
-  .container::after {
-    content: '';
-    display: table;
-    clear: both; }
-
-.hidden-form {
-  width: 50vw;
-  position: absolute;
-  transform-style: preserve-3d;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
 
 @media screen and (max-width: 700px) {
   .card, .third, .arrow, .text, .half, .menu-text {
