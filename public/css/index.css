@@ -41,12 +41,17 @@ html, body {
   line-height: 160%;
   font-size: 16px; }
 
+.center {
+  text-align: center !important; }
+
 .home-full-bg {
-  background-color: #0071bc; }
-  .home-full-bg .text {
-    padding: 20vh;
-    color: white;
+  background-color: #0071bc;
+  color: white; }
+  .home-full-bg .big-padding {
+    padding: 20vh 0;
     font-size: 1.1em; }
+  .home-full-bg h1 {
+    line-height: 1; }
   .home-full-bg .button {
     font-size: 1.1em;
     margin-top: 20px;
@@ -55,7 +60,7 @@ html, body {
     color: white;
     display: inline-block;
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     text-decoration: none;
     cursor: pointer; }
     .home-full-bg .button:hover {
@@ -163,7 +168,7 @@ html, body {
   .card * {
     margin-bottom: 20px; }
   .card .tag {
-    background: #FEFAC0;
+    background: #fdb81e;
     padding: 10px;
     margin-right: 5px; }
 
@@ -190,7 +195,7 @@ html, body {
   transform: translate(-50%, -50%); }
 
 @media screen and (max-width: 700px) {
-  .card, .third, .arrow, .text {
+  .card, .third, .arrow, .text, .half, .menu-text {
     display: block;
     clear: both;
     float: none;
@@ -198,7 +203,12 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px; }
-    .card:first-child, .third:first-child, .arrow:first-child, .text:first-child {
+    .card:first-child, .third:first-child, .arrow:first-child, .text:first-child, .half:first-child, .menu-text:first-child {
       margin-left: auto; }
-    .card:last-child, .third:last-child, .arrow:last-child, .text:last-child {
-      margin-right: auto; } }
+    .card:last-child, .third:last-child, .arrow:last-child, .text:last-child, .half:last-child, .menu-text:last-child {
+      margin-right: auto; }
+  .big-padding {
+    padding: 10px 0 !important; }
+  .menu-text {
+    position: relative !important;
+    text-align: left !important; } }

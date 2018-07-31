@@ -4,15 +4,14 @@ html
   body
     include includes/navbar
     .container.section
-
-          each project in projects
-            .card
-              .title= project.fields.Name  || ''
-              .tags
-                if project.fields.Tags
-                  each tag in project.fields.Tags
-                    span.tag= tag || ''
-              .description= project.fields.Description || ''
-              a(target="_blank" href=project.fields.Github || '').github Github
-              br
-              a(target="_blank" href=project.fields.Website || '').github Website
+      each project in projects
+        .card
+          .title= project.fields.Name  || ''
+          .tags
+            if project.fields.Tags
+              each tag in project.fields.Tags
+                span.tag= tag || ''
+          .description= project.fields.Description || ''
+          a(target="_blank" href=project.fields.Github || '').github Github
+          br
+          a(target="_blank" href=project.fields.Website || '').github Website

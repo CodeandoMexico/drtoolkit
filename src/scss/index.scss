@@ -4,7 +4,7 @@
 
 $navy: #0071bc;
 $blue: #112e51;
-$yellow: #FEFAC0;
+$yellow: #fdb81e;
 $red: #e31c3d;
 $red-darkest: #981b1e;
 $space: 10px;
@@ -15,29 +15,29 @@ html, body{
   line-height: 160%;
   font-size: $base-text;
 }
-
-
+.center{
+  text-align: center !important;
+}
 .home-full-bg{
   background-color: $navy;
-  // .arrow{
-  //   background-image: url('../img/arrow.jpg');
-  //   background-size: cover;
-  //   background-position: center;
-  // }
-  .text{
-    padding: 20vh;
-    color: white;
+  color: white;
+
+  .big-padding{
+    padding: 20vh 0;
     font-size: 1.1em;
+  }
+  h1{
+    line-height: 1;
   }
   .button{
     font-size: 1.1em;
     margin-top: $space*2;
-    margin-right: $space;
+    margin-right: $space ;
     background: $red;
     color: white;
     display: inline-block;
     padding: $space $space*2;
-    border-radius: $space;
+    border-radius: $space/2;
     text-decoration: none;
     cursor: pointer;
     &:hover{
@@ -123,8 +123,15 @@ html, body{
 
 
 @media screen and(max-width: 700px){
-  .card, .third, .arrow, .text{
+  .card, .third, .arrow, .text, .half, .menu-text{
     @include stack();
     margin-bottom: $space*2;
+  }
+  .big-padding{
+    padding: $space 0 !important;
+  }
+  .menu-text{
+    position: relative !important;
+    text-align: left !important;
   }
 }
