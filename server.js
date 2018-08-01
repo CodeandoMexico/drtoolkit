@@ -43,4 +43,4 @@ app.get('/projects', (req, res)=> {
   })
 })
 
-app.listen(process.env.PORT, () => console.log('Listening on port 3000!'))
+app.listen(process.env.PORT || 3000, () => console.log('App started!'))
