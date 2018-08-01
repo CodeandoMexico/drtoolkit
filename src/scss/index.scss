@@ -1,20 +1,21 @@
 @import 'reset';
 @import 'node_modules/jeet/scss/index.scss';
-@import url('https://fonts.googleapis.com/css?family=Cabin');
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded|Noto+Sans');
 @import 'units';
 @import 'layout';
 
 .home-full-bg{
   background-color: $navy;
-  color: white;
-
-  .big-padding{
-    padding: 20vh 0;
-    font-size: 1.1em;
+  color: $white;
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-
-  h1{
-    line-height: 1;
+  
+  .big-padding{
+    padding: 5vh 0;
+    font-size: 1.1em;
   }
 
   .button{
@@ -22,14 +23,14 @@
     margin-top: $space*2;
     margin-right: $space ;
     background: $red;
-    color: white;
+    color: $white;
     display: inline-block;
     padding: $space $space*2;
     border-radius: $space/2;
     text-decoration: none;
     cursor: pointer;
     &:hover{
-      background: $red-darkest;
+      box-shadow: 0 1px 4px 0 $navy;
     }
   }
 }
@@ -52,8 +53,8 @@
     text-align: right;
     padding: $space*4 0;
     a{
-      padding-left: $space;
-      color: white;
+      padding-left: $space*3;
+
       text-decoration: none;
       font-size: 1.2em;
       &:hover{
@@ -63,26 +64,61 @@
   }
 }
 
-
+.tagsearch{
+  display: inline-block;
+  background: $yellow;
+  padding: $space;
+  margin-right: $space/2;
+  cursor: pointer;
+  margin-bottom: $space;
+  &:hover{
+    background: $yellow_accent;
+  }
+}
 .card{
-  @include column(1/4, $cycle:4);
   box-sizing: border-box;
   -webkit-box-shadow: 0px 0px 24px 1px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 0px 24px 1px rgba(0,0,0,0.4);
   box-shadow: 0px 0px 24px 1px rgba(0,0,0,0.4);
   padding: $space*2;
+  img{
+    max-height: 200px;
+  }
   .title{
     font-size: 2em;
   }
-  *{
-    margin-bottom: $space*2;
+  .tags{
+    margin: 20px 0;
   }
   .tag{
     background: $yellow;
     padding: $space;
     margin-right: $space/2;
   }
+  .icons{
+    display: inline-flex;
+    .icon{
+      color: $navy;
+      margin-right: $space;
+    }
+  }
 }
+
+.projects{
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.footer{
+  background: $blue;
+}
+
 
 @media screen and(max-width: 700px){
   .card, .third, .arrow, .text, .half, .menu-text{
@@ -95,5 +131,8 @@
   .menu-text{
     position: relative !important;
     text-align: left !important;
+  }
+  .home-full-bg .container{
+    display: block;
   }
 }

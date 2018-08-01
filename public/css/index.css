@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css?family=Cabin");
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded|Noto+Sans");
 html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -37,9 +37,16 @@ table {
   border-spacing: 0; }
 
 html, body {
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   line-height: 160%;
   font-size: 16px; }
+
+img {
+  max-width: 100%; }
+
+h1, h2, h3, h4 {
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  line-height: 1; }
 
 .container {
   width: auto;
@@ -82,6 +89,27 @@ html, body {
   .third:nth-child(3n + 1) {
     clear: both; }
 
+.quarter {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 22.75%;
+  margin-left: 0%;
+  margin-right: 3%; }
+  .quarter::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .quarter:nth-child(n) {
+    margin-right: 3%;
+    float: left;
+    clear: none; }
+  .quarter:nth-child(4n) {
+    margin-right: 0%;
+    float: right; }
+  .quarter:nth-child(4n + 1) {
+    clear: both; }
+
 .half {
   float: left;
   clear: none;
@@ -107,30 +135,41 @@ html, body {
   font-size: 4em;
   line-height: 1; }
 
+.single-line-logo {
+  padding: 20px 0; }
+
+.margin-bottom {
+  margin-bottom: 20px; }
+
+.medium-padding {
+  padding: 40px 0 0 0; }
+
 .home-full-bg {
-  background-color: #0071bc;
-  color: white; }
+  background-color: #337792;
+  color: #F1EFEE; }
+  .home-full-bg .container {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
   .home-full-bg .big-padding {
-    padding: 20vh 0;
+    padding: 5vh 0;
     font-size: 1.1em; }
-  .home-full-bg h1 {
-    line-height: 1; }
   .home-full-bg .button {
     font-size: 1.1em;
     margin-top: 20px;
     margin-right: 10px;
-    background: #e31c3d;
-    color: white;
+    background: #ED1879;
+    color: #F1EFEE;
     display: inline-block;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     cursor: pointer; }
     .home-full-bg .button:hover {
-      background: #981b1e; }
+      box-shadow: 0 1px 4px 0 #337792; }
 
 .menu {
-  background: #112e51; }
+  background: #A4EBEB; }
   .menu .container {
     position: relative; }
   .menu .menu-logo {
@@ -145,46 +184,55 @@ html, body {
     text-align: right;
     padding: 40px 0; }
     .menu .menu-text a {
-      padding-left: 10px;
-      color: white;
+      padding-left: 30px;
       text-decoration: none;
       font-size: 1.2em; }
       .menu .menu-text a:hover {
-        color: #e31c3d; }
+        color: #ED1879; }
+
+.tagsearch {
+  display: inline-block;
+  background: #fdb81e;
+  padding: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  margin-bottom: 10px; }
+  .tagsearch:hover {
+    background: #f9c642; }
 
 .card {
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 22.75%;
-  margin-left: 0%;
-  margin-right: 3%;
   box-sizing: border-box;
   -webkit-box-shadow: 0px 0px 24px 1px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0px 0px 24px 1px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 0px 24px 1px rgba(0, 0, 0, 0.4);
   padding: 20px; }
-  .card::after {
-    content: '';
-    display: table;
-    clear: both; }
-  .card:nth-child(n) {
-    margin-right: 3%;
-    float: left;
-    clear: none; }
-  .card:nth-child(4n) {
-    margin-right: 0%;
-    float: right; }
-  .card:nth-child(4n + 1) {
-    clear: both; }
+  .card img {
+    max-height: 200px; }
   .card .title {
     font-size: 2em; }
-  .card * {
-    margin-bottom: 20px; }
+  .card .tags {
+    margin: 20px 0; }
   .card .tag {
     background: #fdb81e;
     padding: 10px;
     margin-right: 5px; }
+  .card .icons {
+    display: inline-flex; }
+    .card .icons .icon {
+      color: #337792;
+      margin-right: 10px; }
+
+.projects {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); }
+  .projects .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+
+.footer {
+  background: #A4EBEB; }
 
 @media screen and (max-width: 700px) {
   .card, .third, .arrow, .text, .half, .menu-text {
@@ -203,4 +251,6 @@ html, body {
     padding: 10px 0 !important; }
   .menu-text {
     position: relative !important;
-    text-align: left !important; } }
+    text-align: left !important; }
+  .home-full-bg .container {
+    display: block; } }

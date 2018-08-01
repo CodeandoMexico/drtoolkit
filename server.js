@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
-app.get('/toolkit', (req, res) =>{
+app.get('/toolkit', (req, res) => {
   return fetch('https://api.airtable.com/v0/apphh54RWCIy6BMlr/Projects?maxRecords=10&view=All', {
     headers: {
       'Authorization': 'Bearer ' + process.env.AIRTABLE_API_KEY
@@ -25,8 +25,22 @@ app.get('/toolkit', (req, res) =>{
   })
 })
 
-app.get('/about', (req, res)=>{
+app.get('/about', (req, res) => {
   res.render('about')
+})
+
+app.get('/projects', (req, res)=> {
+  return fetch('https://api.airtable.com/v0/apphh54RWCIy6BMlr/Projects?maxRecords=10&view=All', {
+    headers: {
+      'Authorization': 'Bearer ' + process.env.AIRTABLE_API_KEY
+    },
+    body: JSON.stringify()
+  })
+  .then(response => response.json())
+  .then(function (json) {
+    // res.send(json)
+    res.send(json)
+  })
 })
 
 app.listen(process.env.PORT, () => console.log('Listening on port 3000!'))
