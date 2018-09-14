@@ -1,0 +1,29 @@
+//
+// Navbar component
+// -------------------------------------------
+
+
+// Variables
+//
+$navbar-link-color: $link-navs;
+$navbar-link-color-hover: $red;
+$brand-width: 150px;
+
+
+.navbar {
+  a {
+    color: $navbar-link-color;
+
+    @include hover-focus {
+      color: $navbar-link-color-hover;
+    }
+  }
+}
+
+.navbar-brand {
+  width: $brand-width;
+}
+
+.navbar-toggler {
+  @include button-theme($blue);
+}

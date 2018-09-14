@@ -1,0 +1,55 @@
+//
+// Cards component
+// -------------------------------------------
+
+
+// Variables
+//
+$card-padding: 1.25rem;
+$card-margin-bottom: 1.25rem;
+$card-shadow: 0 0 .625rem rgba(0, 0, 0, 0.4);
+$card-tags-padding: .3125rem 0 .625rem 0;
+$card-tag-padding: .125rem .625rem;
+$card-tag-background: $yellow;
+
+
+.card {
+  display: flex;
+  box-shadow: $card-shadow;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: $card-padding;
+  margin-bottom: $card-margin-bottom;
+
+  img {
+    margin: auto;
+  }
+
+  .link-image {
+    display: block;
+    margin: 0;
+  }
+
+  .tags {
+    padding: $card-tags-padding;
+
+    .tag {
+      font-size: 80%;
+      padding: $card-tag-padding;
+      border-radius: 2rem;
+      background-color: $card-tag-background;
+
+      &:not(:last-child) {
+        margin-right: .3125rem;
+      }
+    }
+  }
+
+  .icon {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: .625rem;
+    }
+  }
+}

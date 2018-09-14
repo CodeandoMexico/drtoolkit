@@ -1,0 +1,18 @@
+//
+// About view
+// -------------------------------------------
+
+
+// Variables
+//
+$about-communities-padding: $section-padding;
+$about-community-margin-bottom: 3rem;
+
+
+#about-communities {
+  padding: $about-communities-padding;
+
+  [class*="column-of-"] {
+    margin-bottom: $about-community-margin-bottom;
+  }
+}
