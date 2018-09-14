@@ -1,5 +1,17 @@
-.footer: .container.medium-padding
-  img(src="img/logo.png").menu-logo
+#footer
+  .container
+    .columns.vertical-alignment
+      .column-of-4.cellphone-column-of-12
+        a.footer-brand(href="/"): img(src="img/logo.png").menu-logo
+      .column-of-4.cellphone-column-of-12
+        nav.nav-vertical
+          a(href="/about") About us
+          a(href="/toolkit") Toolkit
+          a(href="") Contact Us
+      .column-of-4.cellphone-column-of-12
+        nav.nav-vertical
+          include navigation-links
+          a.code-for-all(href="https://codeforall.org/", target="_blank"): img(src="img/code_for_all.png")
 
 script(src="js/jquery-3.3.1.min.js")
 script(src="js/app.js")

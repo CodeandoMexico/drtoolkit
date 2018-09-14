@@ -1,6 +1,7 @@
-.menu: .container
-  a(href="/"): img(src="img/logo.png").menu-logo
-  .menu-text
-    a(href="/about") About us
-    a(href="/toolkit") Toolkit
-    a(href="") Contact Us
+.navbar
+  .container
+    .column
+      a.navbar-brand(href="/"): img(src="img/logo.png").menu-logo
+      button.navbar-toggler: i.menu-icon
+      nav.navigation-end
+        include navigation-links

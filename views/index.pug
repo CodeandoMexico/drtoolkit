@@ -1,38 +1,42 @@
 extends layout
 block content
-  .home-full-bg
-    .container
-      .big-padding.center.half
-        img(src="img/hero.png")
-      .big-padding.half
-        h1 DISASTER RELIEF TOOLKIT
-        p This is an open repository of tools that can be used by governments, rescue teams and citizen support networks to make coordination, cooperation and communication tasks more efficient when facing a natural disaster. 
-        a(href="/toolkit").button Check the kit
-        a(target="_blank" href="https://airtable.com/shrvEogfvjkz9HSFW").button Propose a tool
+  #home-disaster-section
+    .container.vertical-alignment
+      .columns.vertical-alignment
+        .column
+          img(src="img/hero.png")
+        .column
+          h1 DISASTER RELIEF TOOLKIT
+          p This is an open repository of tools that can be used by governments, rescue teams and citizen support networks to make coordination, cooperation and communication tasks more efficient when facing a natural disaster. 
+          a(href="/toolkit").button Check the kit
+          a(target="_blank" href="https://airtable.com/shrvEogfvjkz9HSFW").button Propose a tool
 
-  .container.section
-    .third
-      h2 What is DRTK
-      p A set of open code, easily replicable and well documented tools to help make communication, cooperation and coordination between different government, citizen and international relief efforts during an emergency crisis. 
-    .third
-      h2 HOW CAN YOU USE IT?
-      p If you are a citizen or government official, review the apps and define which ones work best for your context. Every app has a README with extensive documentation so you can easily deploy it. 
-    .third
-      h2 HOW CAN YOU CONTRIBUTE?
-      p This is an open, collaborative effort. Do you know an app that we can include? Let us know! You can also contribute through:
-      ul
-        li Code
-        li Donate
-        li Support
-  
-  .blue-bg.section
+  #home-info-section
     .container
-      .quarter: .mega-text Brought To You By
-      .quarter.card
-        img(src="img/codeando_mexico.png").single-line-logo
-      .quarter.card
-        img(src="img/code_for_romania.png")
-      .quarter.card 
-        img(src="img/code_for_all.png")
+      .columns
+        .column-of-4.cellphone-column-of-12
+          h2 What is DRTK
+          p A set of open code, easily replicable and well documented tools to help make communication, cooperation and coordination between different government, citizen and international relief efforts during an emergency crisis. 
+        .column-of-4.cellphone-column-of-12
+          h2 HOW CAN YOU USE IT?
+          p If you are a citizen or government official, review the apps and define which ones work best for your context. Every app has a README with extensive documentation so you can easily deploy it. 
+        .column-of-4.cellphone-column-of-12
+          h2 HOW CAN YOU CONTRIBUTE?
+          p This is an open, collaborative effort. Do you know an app that we can include? Let us know! You can also contribute through:
+          ul
+            li Code
+            li Donate
+            li Support
+  
+  #home-brought-to
+    .container
+      .columns.vertical-alignment
+        .column: .mega-text Brought To You By
+        .column
+          .card: img(src="img/codeando_mexico.png").single-line-logo
+        .column
+          .card: img(src="img/code_for_romania.png")
+        .column
+          .card: img(src="img/code_for_all.png")
 
 
