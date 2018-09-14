@@ -1,0 +1,101 @@
+//
+// Index view
+// -------------------------------------------
+
+
+// Variables
+//
+$disaster-section-height: calc(100vh - 94px);
+$disaster-section-color: $white;
+$disaster-section-background: $navy;
+$home-info-section-padding: $section-padding;
+$mega-text-size: 3rem;
+$home-brought-to-padding: $section-padding;
+$home-buttons-padding: .625rem 1.25rem;
+$home-buttons-size: 1.25rem;
+$home-card-height: 100px;
+
+
+#home-disaster-section {
+  height: $disaster-section-height;
+  color: $disaster-section-color;
+  background-color: $disaster-section-background;
+
+  h1 { margin-top: 0; }
+  p { margin-bottom: 2rem; }
+  a.button {
+    padding: $home-buttons-padding;
+    font-size: $home-buttons-size;
+    @include button-theme($red);
+
+    &~ .button { margin-left: 1rem; }
+  }
+
+  .container {
+    height: $disaster-section-height;
+  }
+}
+
+#home-info-section {
+  padding: $home-info-section-padding;
+}
+
+#home-brought-to {
+  padding: $home-brought-to-padding;
+
+  .mega-text {
+    font-size: $mega-text-size;
+    line-height: 1;
+
+    @include breakpoint-max($cellphone-size - 1) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .card {
+    height: $home-card-height;
+    padding: 0;
+    margin: 0;
+
+    img { width: 70%; }
+
+    @include breakpoint-max($cellphone-size - 1) {
+      margin: 1rem 0;
+
+      img { width: 50%; }
+    }
+  }
+}
+
+@include breakpoint-max($tablet-size - 1) {
+  #home-disaster-section {
+    height: auto;
+
+    .container {
+      height: auto;
+      padding: 3rem 0;
+    }
+
+    a.button {
+      margin: 1rem 1rem 0 0;
+      
+      &~ .button { margin-left: 0; }
+    }
+  }
+
+  #home-info-section {
+    padding: 3rem 0;
+
+    [class*="column-of-"]:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  #home-brought-to {
+    padding: 3rem 0;
+
+    .mega-text {
+      font-size: $mega-text-size - 1;
+    }
+  }
+}

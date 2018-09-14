@@ -1,0 +1,28 @@
+// Importing fonts:
+// * Encode Sans Semi Expanded for titles
+// * Noto Sans for all
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded|Noto+Sans");
+
+// Global variables
+// to config Cactu global variables
+@import "base/global_variables";
+
+// Cactu framework
+// Documentation: http://cactu.site/documentation/getting-started/introduction/
+@import "node_modules/cactu/scss/cactu.scss";
+
+// Base
+@import "base/common-classes";
+
+// Elements
+@import "elements/typography";
+
+// Components
+@import "components/cards";
+@import "components/footer";
+@import "components/navbar";
+
+// Views
+@import "views/index";
+@import "views/about";
+@import "views/toolkit";

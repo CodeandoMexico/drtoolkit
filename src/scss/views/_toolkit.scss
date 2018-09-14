@@ -1,0 +1,45 @@
+//
+// Toolkit view
+// -------------------------------------------
+
+
+// Variables
+//
+$toolkit-padding: $section-padding;
+$nav-tagsearch-link-color: $text-color;
+$nav-tagsearch-link-background: $yellow;
+$nav-tagsearch-link-hover-background: $yellow_accent;
+
+
+#toolkit {
+  header {
+    padding-top: 3rem;
+  }
+
+  .projects {
+    display: grid;
+    grid-gap: 1rem;
+    padding: $toolkit-padding;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+
+    @include breakpoint-max($cellphone-size - 1) {
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    }
+  }
+
+  .nav-tagsearch {
+    a {
+      color: $nav-tagsearch-link-color;
+      margin-bottom: .625rem;
+      background-color: $nav-tagsearch-link-background;
+
+      @include hover-focus {
+        background-color: $nav-tagsearch-link-hover-background;
+      }
+
+      &:not(:last-child) {
+        margin-right: .3125rem;
+      }
+    }
+  }
+}

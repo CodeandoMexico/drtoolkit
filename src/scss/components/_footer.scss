@@ -1,0 +1,47 @@
+//
+// Footer component
+// -------------------------------------------
+
+
+// Variables
+//
+$footer-padding: 4rem 0;
+$footer-background: $blue;
+$footer-brand-width: 250px;
+$footer-link-color: $link-navs;
+$footer-link-color-hover: $red;
+
+
+#footer {
+  padding: $footer-padding;
+  background-color: $footer-background;
+
+  .footer-brand {
+    display: block;
+    width: $footer-brand-width;
+
+    @include breakpoint-max($tablet-size - 1) {
+      width: 150px;
+      margin-bottom: 1rem;
+    }
+    @include breakpoint-max($small-desktop-size - 1) {
+      width: 170px;
+    }
+  }
+
+  nav {
+    a {
+      color: $footer-link-color;
+
+      @include hover-focus {
+        color: $footer-link-color-hover;
+      }
+
+      &.code-for-all {
+        display: block;
+        width: $footer-brand-width - 50px;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
