@@ -16,9 +16,10 @@
     "pug": "^2.0.3"
   },
   "devDependencies": {
+    "cactu": "^0.18.1",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
     "gulp-sass": "^4.0.1",
-    "jeet": "^7.2.0",
     "node-sass": "^4.9.2"
   }
 }
