@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/toolkit', (req, res) => {
-  return fetch('https://api.airtable.com/v0/apphh54RWCIy6BMlr/Projects?maxRecords=10&view=All', {
+  return fetch('https://api.airtable.com/v0/apphh54RWCIy6BMlr/Projects?maxRecords=10', {
     headers: {
       'Authorization': 'Bearer ' + process.env.AIRTABLE_API_KEY
     },
@@ -30,7 +30,7 @@ app.get('/about', (req, res) => {
 })
 
 app.get('/projects', (req, res)=> {
-  return fetch('https://api.airtable.com/v0/apphh54RWCIy6BMlr/Projects?maxRecords=10&view=All', {
+  return fetch('https://api.airtable.com/v0/apphh54RWCIy6BMlr/Projects?maxRecords=10', {
     headers: {
       'Authorization': 'Bearer ' + process.env.AIRTABLE_API_KEY
     },
