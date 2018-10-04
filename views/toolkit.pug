@@ -18,7 +18,7 @@ block content
               return item.replace(/\s+/g,'').toLowerCase();
             })   
         div(class=tags || '').card
-          if project.fields.Image[0]
+          if project.fields.Image
             a.link-image(target="_blank" href=project.fields.Website || ''): img(src=project.fields.Image[0].thumbnails.large.url)
           h2= project.fields.Name  || ''
           .tags
