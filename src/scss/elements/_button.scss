@@ -1,0 +1,12 @@
+//
+// Button element
+// -------------------------------------------
+
+
+// Variables
+//
+$principal-button-color: $red;
+
+.button-principal {
+  @include button-theme($principal-button-color);
+}
