@@ -1,0 +1,48 @@
+extends layout
+block content
+  #proposal
+    .container: .column-of-6.proposal-form
+      iframe(
+        class="airtable-embed"
+        src="https://airtable.com/embed/shr9TWHI4fXO4tMd9?backgroundColor=pink"
+        frameborder="0"
+        onmousewheel=""
+        width="100%"
+        height="1200"
+      )
+      //- h1 Propose a tool
+      //- form(action="/proposal-submit")
+      //-   .form-group
+      //-     label Name:
+      //-     input(type="text" name="name" placeholder="Type a proposal name")
+      //-   .form-group
+      //-     label Desciption:
+      //-     textarea(type="text" name="description" placeholder="Type a proposal description")
+      //-   .form-group
+      //-     label Tags:
+      //-     br
+      //-     label.checkbox
+      //-       input(type="checkbox" name="tags" value="Donations")
+      //-       | Donations
+      //-     label.checkbox
+      //-       input(type="checkbox" name="tags" value="Mapping")
+      //-       | Mapping
+      //-     label.checkbox
+      //-       input(type="checkbox" name="tags" value="Missing persons")
+      //-       | Missing persons
+      //-     label.checkbox
+      //-       input(type="checkbox" name="tags" value="Collecting information")
+      //-       | Collecting information
+      //-     label.checkbox
+      //-       input(type="checkbox" name="tags" value="Coordinate help")
+      //-       | Coordinate help
+      //-   .form-group
+      //-     label Image:
+      //-     input(type="url" name="image", placeholder="Type a url image")
+      //-   .form-group
+      //-     label Website:
+      //-     input(type="url" name="website" placeholder="Type a url website")
+      //-   .form-group
+      //-     label Github:
+      //-     input(type="url" name="github" placeholder="Type a url github account")
+      //-   button.button-principal(type="submit") Send proposal

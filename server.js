@@ -29,6 +29,34 @@ app.get('/about', (req, res) => {
   res.render('about')
 })
 
+app.get('/proposal', (req, res) => {
+  res.render('proposal')
+})
+
+app.get('/proposal-submit', (req, res) => {
+  var data = {
+    fields: {
+      Name: req.query.name,
+      Tags: req.query.tags,
+      Image: [],
+      Description: req.query.description,
+      Website: req.query.website,
+      Github: req.query.github
+    }
+  }
+
+  return fetch('https://api.airtable.com/v0/apphh54RWCIy6BMlr/Projects', {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: {
+      'Authorization': 'Bearer ' + process.env.AIRTABLE_API_KEY,
+      'Content-type': 'application/json'
+    }
+  })
+  .then(res => res.json())
+  .then(json => res.redirect('proposal'))
+})
+
 app.get('/projects', (req, res)=> {
   return fetch('https://api.airtable.com/v0/apphh54RWCIy6BMlr/Projects?maxRecords=10', {
     headers: {
