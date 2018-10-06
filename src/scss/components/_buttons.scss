@@ -1,0 +1,30 @@
+//
+// Buttons component
+// -------------------------------------------
+
+
+// Variables
+//
+$button-icon-padding: 1rem;
+$button-icon-background: $soft-blue; 
+
+
+.button-icon-left {
+  display: flex;
+  padding: $button-icon-padding;
+  border-radius: $radius;
+  @include button-theme($button-icon-background);
+
+  i {
+    font-size: 1.5rem;
+    margin-right: .5rem;
+  }
+
+  &:not(:last-child) {
+    margin-right: .5rem;
+  }
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+}
