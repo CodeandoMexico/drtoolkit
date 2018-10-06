@@ -1,5 +1,85 @@
 extends layout
 block content
-  #toolkit
-    .container: .column
-      h1 Toolkit
+  #disaster-icons
+    .container-expanded: .columns
+      .column: a(href="#")
+        img(src="img/drought-white.png", alt="Drought")
+      .column: a(href="#")
+        img(src="img/volcano-white.png", alt="Volcano")
+      .column: a(href="#")
+        img(src="img/twister-white.png", alt="Twister")
+      .column: a(href="#")
+        img(src="img/fire-white.png", alt="Fire")
+      .column: a(href="#")
+        img(src="img/earthquake-white.png", alt="Earthquake")
+      .column: a(href="#")
+        img(src="img/landslide-white.png", alt="Lanslide")
+      .column: a(href="#")
+        img(src="img/tsunami-white.png", alt="Tsunami")
+      .column: a(href="#")
+        img(src="img/snow-fall-white.png", alt="Snow fall")
+
+  include includes/info-section
+
+  #toolkits
+    .container
+      .columns
+        .column-of-4
+          h3 Apps info
+        .column-of-8
+          .toolkit
+            h5 Verificado 19s
+            section
+              button verify information
+              button crowdsourcing
+              button codeando méxico
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis.
+            footer
+              a.button-icon-left(href="#")
+                i.fab.fa-github
+                | Github repository
+              a.button-icon-left(href="#")
+                i.fa.fa-file
+                | Documentation
+          .toolkit
+            h5 ¿Cómo ayudar?
+            section
+              button verify information
+              button crowdsourcing
+              button codeando méxico
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis.
+            footer
+              a.button-icon-left(href="#")
+                i.fab.fa-github
+                | Github repository
+              a.button-icon-left(href="#")
+                i.fa.fa-file
+                | Documentation
+          .toolkit
+            h5 Twitter bot
+            section
+              button fake news bot
+              button codeando méxico
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis.
+            footer
+              a.button-icon-left(href="#")
+                i.fab.fa-github
+                | Github repository
+              a.button-icon-left(href="#")
+                i.fa.fa-file
+                | Documentation
+
+  #help-contact
+    .container: .columns
+      .column-of-4
+        h1
+          span Need help?
+          br
+          span Contact us
+      .column-of-8
+        form
+          .form-group
+            input(type="email" name="email" placeholder="Email address")
+          .form-group
+            textarea(rows="4" name="message" placeholder="Message")
+          button.button-navy(type="submit") Submit
