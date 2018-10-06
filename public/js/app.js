@@ -22,8 +22,8 @@
     },
 
     tag_search_selectors: function() {
-      if ($('#toolkit .projects').length > 0) {
-        $('#toolkit .tagsearch').on('click', function() {
+      if ($('#projects .projects').length > 0) {
+        $('#projects .tagsearch').on('click', function() {
           var tagSelected = $(this).data('search');
 
           $('.card').show();

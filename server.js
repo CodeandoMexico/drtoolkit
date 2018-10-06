@@ -12,17 +12,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/toolkit', (req, res) => {
-  return fetch('https://api.airtable.com/v0/apphh54RWCIy6BMlr/Projects?maxRecords=10', {
-    headers: {
-      'Authorization': 'Bearer ' + process.env.AIRTABLE_API_KEY
-    },
-    body: JSON.stringify()
-  })
-  .then(response => response.json())
-  .then(function (json) {
-    // res.send(json)
-    res.render('toolkit', {projects: json.records})
-  })
+  res.render('toolkit')
 })
 
 app.get('/about', (req, res) => {
@@ -67,8 +57,19 @@ app.get('/projects', (req, res)=> {
   .then(response => response.json())
   .then(function (json) {
     // res.send(json)
-    res.send(json)
+    res.render('projects', { projects: json.records })
   })
+  // return fetch('https://api.airtable.com/v0/apphh54RWCIy6BMlr/Projects?maxRecords=10', {
+  //   headers: {
+  //     'Authorization': 'Bearer ' + process.env.AIRTABLE_API_KEY
+  //   },
+  //   body: JSON.stringify()
+  // })
+  // .then(response => response.json())
+  // .then(function (json) {
+  //   // res.send(json)
+  //   res.send(json)
+  // })
 })
 
 app.listen(process.env.PORT || 3000, () => console.log('App started!'))

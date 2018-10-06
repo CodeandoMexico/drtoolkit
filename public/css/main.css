@@ -2237,23 +2237,23 @@ h3, .h3 {
   .proposal-form .form-group {
     margin-bottom: 2rem; }
 
-#toolkit header {
+#projects header {
   padding-top: 3rem; }
 
-#toolkit .projects {
+#projects .projects {
   display: grid;
   grid-gap: 1rem;
   padding: 6rem 0;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); }
   @media screen and (max-width: 575px) {
-    #toolkit .projects {
+    #projects .projects {
       grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); } }
 
-#toolkit .nav-tagsearch a {
+#projects .nav-tagsearch a {
   color: #343a40;
   margin-bottom: .625rem;
   background-color: #fdb81e; }
-  #toolkit .nav-tagsearch a:hover, #toolkit .nav-tagsearch a:focus {
+  #projects .nav-tagsearch a:hover, #projects .nav-tagsearch a:focus {
     background-color: #f9c642; }
-  #toolkit .nav-tagsearch a:not(:last-child) {
+  #projects .nav-tagsearch a:not(:last-child) {
     margin-right: .3125rem; }

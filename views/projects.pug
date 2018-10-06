@@ -1,0 +1,31 @@
+extends layout
+block content
+  #projects
+    .container: header.column
+      nav.nav-horizontal-center.nav-tagsearch
+        a.tagsearch(href="#" data-search="all") All
+        a.tagsearch(href="#" data-search="donations") Donations
+        a.tagsearch(href="#" data-search="mapping") Mapping
+        a.tagsearch(href="#" data-search="missingpersons") Missing persons
+        a.tagsearch(href="#" data-search="collectinginformation") Collecting information
+        a.tagsearch(href="#" data-search="coordinatehelp") Coordinate help
+
+    .container: .column: .projects
+      each project in projects
+        if project.fields.Tags
+          -
+            var tags = project.fields.Tags.map(function(item){
+              return item.replace(/\s+/g,'').toLowerCase();
+            })
+        div(class=tags || '').card
+          if project.fields.Image
+            a.link-image(target="_blank" href=project.fields.Website || ''): img(src=project.fields.Image[0].thumbnails.large.url)
+          h2= project.fields.Name  || ''
+          .tags
+            if project.fields.Tags
+              each tag in project.fields.Tags
+                span.tag= tag || ''
+          p.description= project.fields.Description || ''
+          .icons
+            a.icon(target="_blank" href=project.fields.Github || ''): i.fab.fa-github-square.fa-2x
+            a.icon(target="_blank" href=project.fields.Website || ''): i.fas.fa-link.fa-2x
