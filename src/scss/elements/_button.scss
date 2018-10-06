@@ -5,8 +5,8 @@
 
 // Variables
 //
-$principal-button-color: $red;
+$button-navy-color: $navy;
 
-.button-principal {
-  @include button-theme($principal-button-color);
+.button-navy {
+  @include button-theme($button-navy-color);
 }
