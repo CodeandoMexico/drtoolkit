@@ -4,19 +4,26 @@
 
 
 // Colors
+//
 $navy:                #337792;
-$blue:                #a4ebeb;
+$blue:                lighten($navy, 5%);
+$soft-blue:           #a4ebeb;
 $yellow:              #fdb81e;
 $yellow_accent:       #f9c642;
 $red:                 #ed1879;
 $red-darkest:         #981b1e;
 $link-navs:           #1d538a;
-$navbar-base-color:   $blue;
+$navbar-base-color:   $soft-blue;
 $link-color:          $navy;
 
 // Fonts
+//
 $secondary-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
 $font-family: 'Noto Sans', $secondary-font;
 
 
 $section-padding: 6rem 0;
+
+// Forms
+$input-border: 1px solid lighten($navy, 30%);
+$input-placeholder-color: darken($soft-blue, 20%);
