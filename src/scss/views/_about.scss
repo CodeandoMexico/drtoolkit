@@ -15,4 +15,13 @@ $about-community-margin-bottom: 3rem;
   [class*="column-of-"] {
     margin-bottom: $about-community-margin-bottom;
   }
+
+  .community {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    img { width: 230px; }
+  }
 }

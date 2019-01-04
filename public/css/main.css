@@ -2267,6 +2267,17 @@ h3, .h3 {
   padding: 6rem 0; }
   #about-communities [class*="column-of-"] {
     margin-bottom: 3rem; }
+  #about-communities .community {
+    height: 72px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 1rem; }
+    #about-communities .community img {
+      width: 230px; }
 
 #proposal {
   padding: 6rem 0; }
