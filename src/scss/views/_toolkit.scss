@@ -22,6 +22,8 @@ $help-contact-padding: 4rem 0;
   img {
     width: 50%;
   }
+
+  @include breakpoint-cellphone { display: none; }
 }
 
 #toolkits {

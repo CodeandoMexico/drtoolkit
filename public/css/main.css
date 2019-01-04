@@ -2301,6 +2301,9 @@ h3, .h3 {
     text-align: center; }
   #disaster-icons img {
     width: 50%; }
+  @media screen and (max-width: 575px) {
+    #disaster-icons {
+      display: none; } }
 
 #toolkits {
   color: #fff;
