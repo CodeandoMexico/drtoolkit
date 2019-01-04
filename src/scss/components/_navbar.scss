@@ -11,15 +11,24 @@ $brand-width: 150px;
 
 
 .navbar {
-  a {
-    color: $navbar-link-color;
+  nav {
+    a {
+      padding: .5rem 1rem;
+      color: $navbar-link-color;
 
-    @include hover-focus {
-      color: $navbar-link-color-hover;
+      @include hover-focus {
+        color: $navbar-link-color-hover;
+      }
     }
   }
 
-  .active { color: $navbar-link-color-hover; }
+  .active {
+    color: $white;
+    border-radius: 3rem;
+    background-color: $navbar-link-color-hover;
+
+    @include hover-focus { color: $white; }
+  }
 }
 
 .navbar-brand {

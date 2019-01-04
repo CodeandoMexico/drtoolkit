@@ -2149,13 +2149,18 @@ h3, .h3 {
       width: 200px;
       margin-top: 1rem; }
 
-.navbar a {
+.navbar nav a {
+  padding: .5rem 1rem;
   color: #1d538a; }
-  .navbar a:hover, .navbar a:focus {
+  .navbar nav a:hover, .navbar nav a:focus {
     color: #ed1879; }
 
 .navbar .active {
-  color: #ed1879; }
+  color: #fff;
+  border-radius: 3rem;
+  background-color: #ed1879; }
+  .navbar .active:hover, .navbar .active:focus {
+    color: #fff; }
 
 .navbar-brand {
   width: 150px; }
