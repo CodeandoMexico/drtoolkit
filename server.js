@@ -15,6 +15,10 @@ app.get('/toolkit', (req, res) => {
   res.render('toolkit', { path: req.path})
 })
 
+app.get('/contact', (req, res) => {
+  res.render('toolkit', { path: req.path })
+})
+
 app.get('/about', (req, res) => {
   res.render('about', { path: req.path })
 })
