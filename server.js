@@ -57,7 +57,10 @@ app.get('/projects', (req, res)=> {
   .then(response => response.json())
   .then(function (json) {
     // res.send(json)
-    res.render('projects', { projects: json.records })
+    res.render('projects', {
+      projects: json.records,
+      path: req.path
+    })
   })
   // return fetch('https://api.airtable.com/v0/apphh54RWCIy6BMlr/Projects?maxRecords=10', {
   //   headers: {
