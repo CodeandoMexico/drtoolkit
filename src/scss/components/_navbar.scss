@@ -18,6 +18,8 @@ $brand-width: 150px;
       color: $navbar-link-color-hover;
     }
   }
+
+  .active { color: $navbar-link-color-hover; }
 }
 
 .navbar-brand {

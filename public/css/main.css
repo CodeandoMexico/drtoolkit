@@ -2154,6 +2154,9 @@ h3, .h3 {
   .navbar a:hover, .navbar a:focus {
     color: #ed1879; }
 
+.navbar .active {
+  color: #ed1879; }
+
 .navbar-brand {
   width: 150px; }
 
@@ -2294,9 +2297,11 @@ h3, .h3 {
 #disaster-icons {
   padding: 2rem 0;
   background-color: #337792; }
+  #disaster-icons a {
+    display: block;
+    text-align: center; }
   #disaster-icons img {
-    width: 50%;
-    margin: auto; }
+    width: 50%; }
 
 #toolkits {
   color: #fff;

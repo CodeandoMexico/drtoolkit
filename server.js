@@ -12,11 +12,11 @@ app.get('/', (req, res) => {
 })
 
 app.get('/toolkit', (req, res) => {
-  res.render('toolkit')
+  res.render('toolkit', { path: req.path})
 })
 
 app.get('/about', (req, res) => {
-  res.render('about')
+  res.render('about', { path: req.path })
 })
 
 app.get('/proposal', (req, res) => {
