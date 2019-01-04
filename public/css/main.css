@@ -2297,8 +2297,7 @@ h3, .h3 {
 #disaster-icons {
   padding: 2rem 0;
   background-color: #337792; }
-  #disaster-icons a {
-    display: block;
+  #disaster-icons .column {
     text-align: center; }
   #disaster-icons img {
     width: 50%; }
