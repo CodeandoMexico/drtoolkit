@@ -17,9 +17,13 @@ $help-contact-padding: 4rem 0;
   padding: $disaster-icons-padding;
   background-color: $disaster-icons-background;
 
+  a {
+    display: block;
+    text-align: center;
+  }
+
   img {
     width: 50%;
-    margin: auto;
   }
 }
 
